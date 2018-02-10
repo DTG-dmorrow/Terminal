@@ -6,12 +6,12 @@ public abstract class Enemy extends Character {
 	
 	//---------------------------Variables---------------------------------
 	private double enemyBoostRatio;
-	private EnemyType type = null;
+	private EnemyType enemyType = null;
 
 	
 	//--------------------------Constructors-------------------------------
-	public Enemy(String newName, double newAttack, double newHealth, int newLevel) {
-		super(newName, newAttack, newHealth, newLevel);
+	public Enemy(EnemyType enemyType, int newLevel) {
+		super(enemyType.getName(), enemyType.getAttack(), enemyType.getHealth(), newLevel);
 	}
 	
 	
